@@ -1,11 +1,12 @@
 import pygame
+from .globals import RED
 
 
 class Snake:
     def __init__(self, surface, length):
         self.parent_screen = surface
         pygame.display.set_caption("@created by Abir!")
-        self.block = pygame.image.load('resources/block4.png').convert()
+        self.block = pygame.image.load("assets/block.png")
         self.length = length
         self.x = [40]*length
         self.y = [40]*length
@@ -43,7 +44,7 @@ class Snake:
         self.draw()
 
     def draw(self):
-        self.image = pygame.image.load('resources/background6.jpg').convert()
+        self.image = pygame.image.load('assets/coverpage.jpg').convert()
         self.parent_screen.blit(self.image, (0, 0))
         for i in range(self.length):
             self.parent_screen.blit(self.block, (self.x[i], self.y[i]))

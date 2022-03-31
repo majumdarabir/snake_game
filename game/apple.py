@@ -7,7 +7,7 @@ class Apple:
 
     def __init__(self, surface):
         self.parent_screen = surface
-        self.image = pygame.image.load('resources/apple4.jpg').convert()
+        self.image = pygame.image.load('assets/apple4.png').convert()
         self.x = 120
         self.y = 120
 
